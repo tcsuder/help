@@ -1,6 +1,6 @@
 import React from "react";
-import Clock from "./Clock.jsx";
-import Ticket from "./Ticket.jsx";
+import Clock from "./Clock";
+import Ticket from "./Ticket";
 
 function App(props) {
   return (
