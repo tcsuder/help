@@ -3,7 +3,11 @@ import ReactDOM from "react-dom";
 import App from './components/App';
 
 
-ReactDOM.render(
-  <App/>,
-  document.getElementById('react-app-root')
-);
+function update() {
+  ReactDOM.render(
+    <App time={new Date().toLocaleTimeString()}/>,
+    document.getElementById('react-app-root')
+  );
+}
+
+setInterval(update, 1000);
