@@ -10,4 +10,4 @@ function Header(props) {
   );
 }
 
-module.exports = Header;
+export default Header;

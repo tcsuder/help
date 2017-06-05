@@ -12,4 +12,4 @@ class Ticket extends React.Component {
   }
 }
 
-module.exports = Ticket;
+export default Ticket; 
