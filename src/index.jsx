@@ -1,22 +1,13 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import { AppContainer } from 'react-hot-loader';
-
+import React from "react";
+import ReactDOM from "react-dom";
 import App from './components/App';
 
-const render = (Component) => {
+
+function update() {
   ReactDOM.render(
-    <AppContainer>
-      <Component/>
-    </AppContainer>,
+    <App/>,
     document.getElementById('react-app-root')
   );
-};
-
-render(App);
-
-if (module.hot) {
-  module.hot.accept('./components/App', () => {
-    render(App)
-  });
 }
+
+setInterval(update, 1000);

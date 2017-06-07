@@ -1,44 +1,23 @@
-const { resolve } = require('path');
-const webpack = require('webpack');
+var webpack = require("webpack");
+var path = require("path");
 
 module.exports = {
-  context: resolve(__dirname, 'src'),
-
-  entry: [
-    'react-hot-loader/patch',
-    'webpack-dev-server/client?http://localhost:8080',
-    'webpack/hot/only-dev-server',
-    './index.jsx'
-  ],
-
+  entry: path.resolve(__dirname, "src") + "/index.jsx",
   output: {
-    filename: 'app.bundle.js',
-    path: resolve(__dirname, 'build'),
-    publicPath: '/'
+    path: path.resolve(__dirname, "build"),
+    filename: "app.bundle.js"
   },
-
+  module: {
+    loaders: [{
+      test: /\.jsx?$/,
+      loader: "babel-loader",
+      exclude: /node_modules/,
+      query: {
+        presets: ['es2015', 'react']
+      }
+    }]
+  },
   resolve: {
     extensions: ['.js', '.jsx']
-  },
-
-  devServer: {
-    hot: true,
-    contentBase: resolve(__dirname, 'build'),
-    publicPath: '/'
-  },
-
-  module: {
-    rules: [
-      {
-        test: /\.jsx?$/,
-        use: [ 'babel-loader', ],
-        exclude: /node_modules/
-      },
-    ],
-  },
-
-  plugins: [
-    new webpack.HotModuleReplacementPlugin(),
-    new webpack.NamedModulesPlugin(),
-  ],
+  }
 };
