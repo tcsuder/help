@@ -5,7 +5,7 @@ import App from './components/App';
 
 function update() {
   ReactDOM.render(
-    <App time={new Date().toLocaleTimeString()}/>,
+    <App/>,
     document.getElementById('react-app-root')
   );
 }
