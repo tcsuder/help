@@ -1,10 +1,10 @@
-var webpack = require("webpack");
-var path = require("path");
+const { webpack } = require("webpack");
+const { resolve } = require('path');
 
 module.exports = {
-  entry: path.resolve(__dirname, "src") + "/index.jsx",
+  entry: resolve(__dirname, "src") + "/index.jsx",
   output: {
-    path: path.resolve(__dirname, "build"),
+    path: resolve(__dirname, "build"),
     filename: "app.bundle.js"
   },
   module: {
