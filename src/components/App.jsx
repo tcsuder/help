@@ -12,4 +12,4 @@ function App(props) {
   );
 }
 
-export default App;
+module.exports = App;

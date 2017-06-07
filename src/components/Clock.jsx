@@ -6,4 +6,4 @@ function Clock(props){
   );
 }
 
-export default Clock;
+module.exports = Clock;
