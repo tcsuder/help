@@ -10,4 +10,4 @@ function Ticket(props){
   );
 }
 
-module.exports = Ticket;
+export default Ticket; 
