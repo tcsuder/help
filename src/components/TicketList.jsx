@@ -10,7 +10,7 @@ function TicketList(props){
       timeWaiting: "15 mins"
     },
     {
-      names: "Thato & Haley",
+      names: "Travis & Haley",
       location: "3a",
       timeWaiting: "4 mins"
     }
