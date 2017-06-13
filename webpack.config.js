@@ -15,6 +15,7 @@ module.exports = {
     path: resolve(__dirname, "build"),
     filename: "app.bundle.js"
   },
+  devtool: "#source-map",
   // additional configuration points for HMR
   devServer: {
     hot: true,
